@@ -13,6 +13,9 @@
 
 #include "common.h"
 #include "interface/kbdcodes.h"
+#ifndef __time_critical_func
+#define __time_critical_func(func) func
+#endif
 
 #define MAX_QUEUE_SIZE (64) 													// Max size of keyboard queue.
 #define MAX_FKEY_SIZE (48)   													// Max length of function key.
