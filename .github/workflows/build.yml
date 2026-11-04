@@ -13,10 +13,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Fetch upstream tags
-      run: git fetch --tags https://github.com/paulscottrobson/neo6502-firmware.git
       with:
         fetch-depth: 0
+    - name: Fetch upstream tags
+      run: git fetch --tags https://github.com/paulscottrobson/neo6502-firmware.git
     - name: Install dependencies
       run: |
         sudo apt update -y -qq
